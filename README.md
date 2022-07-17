@@ -1,12 +1,5 @@
 # A Hackers AI Voice Assistant
 
-### I am not mantaining this repo anymore. If you want to take over, please shoot me a message.
-
-Build your own voice ai. This repo is for my [YouTube video series](https://www.youtube.com/playlist?list=PL5rWfvZIL-NpFXM9nFr15RmEEh4F4ePZW) on building an AI voice assistant with PyTorch.
-
-## Looking for contributors!
-Looking for contributors to help build out the assistant. There is still alot of work to do. This would be a good oppurtunity to learn Machine Learning and how to Engineer an entire ML system from the ground up. If you're interested join the [Discord Server](https://discord.gg/9wSTT4F)
-
 TODO:
 - [x] wake word model and engine
 - [ ] pre-trained wake word model use for fine tuning on your own wakeword
@@ -24,8 +17,6 @@ TODO:
 
 If you're on mac you can install `portaudio` using `homebrew`
 
-**NOTICE: If you are using windows, some things may not work. For example, torchaudio. I suggest trying this on linux or mac, or use wsl2 on windows**
-
 ### using virtualenv (recommend)
 1. `virtualenv voiceassistant.venv`
 2. `source voiceassistant.venv/bin/activate`
@@ -38,11 +29,7 @@ If you're on mac you can install `portaudio` using `homebrew`
 If you are running with just the cpu
 `docker build -f cpu.Dockerfile -t voiceassistant .`
 
-If you are running on a cuda enabled machine 
-`docker build -f Dockerfile -t voiceassistant .`
-
 ## Wake word
-[Youtube Video For WakeWord](https://www.youtube.com/watch?v=ob0p7G2QoHA&list=PL5rWfvZIL-NpFXM9nFr15RmEEh4F4ePZW)
 
 ### scripts
 For more details make sure to visit these files to look at script arguments and description
@@ -96,7 +83,6 @@ For more details make sure to visit these files to look at script arguments and 
 
 
 ## Speech Recognition
-[YouTube Video for Speech Recognition](https://www.youtube.com/watch?v=YereI6Gn3bM&list=PL5rWfvZIL-NpFXM9nFr15RmEEh4F4ePZW&index=2)
 
 ### scripts
 For more details make sure to visit these files to look at script arguments and description
@@ -135,9 +121,8 @@ The pretrained model can be found here at this [google drive](https://drive.goog
     
     use `commonvoice_create_jsons.py` to convert from mp3 to wav and to create train and test json's with the data from Commonvoice by Mozilla
         
-        python commonvoice_create_jsons.py --file_path /path/to/commonvoice/file/.tsv --save_json_path /path/where/you/want/them/saved 
-    
-    if you dont want to convert use `--not-convert` 
+        python commonvoice_create_jsons.py --file_path /path/to/commonvoice/file/.tsv --save_json_path /path/where/you/want/them/saved
+        
         
 2. Train model
     1. use `train.py` to fine tune. checkout the [train.py](https://github.com/LearnedVector/A-Hackers-AI-Voice-Assistant/blob/master/VoiceAssistant/speechrecognition/neuralnet/train.py#L115) argparse for other arguments
@@ -152,4 +137,3 @@ The pretrained model can be found here at this [google drive](https://drive.goog
     1. test using the `engine.py` script
 
 ## Raspberry pi
-documenation to get this running on rpi is in progress...
